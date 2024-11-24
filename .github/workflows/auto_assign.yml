@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Assign Issue
-        uses: actions-ecosystem/action-add-assignees@v1
+        uses: peter-evans/assign-issue@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: "amsmith41"
