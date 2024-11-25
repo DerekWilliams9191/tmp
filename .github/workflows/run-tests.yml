@@ -20,8 +20,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          Python -m pip install --upgrade pip
-          Python3 -m pip install pytest==7.3.1
+          python -m pip install --upgrade pip
+          python3 -m pip install pytest==7.3.1
 
       - name: Run Tests
         run: |
