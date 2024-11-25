@@ -20,11 +20,15 @@ jobs:
 
       - name: Install dependencies
         run: |
+          pwd
+          ls -la
           python -m pip install --upgrade pip
           pip install setuptools
-          pip install -e .  # Install your package in editable mode
+          pip install -e .
           pip install pytest==7.3.1
 
       - name: Run Tests
         run: |
+          pwd
+          ls -la
           pytest
