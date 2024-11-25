@@ -1,0 +1,28 @@
+name: Automatically Run Tests
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python Env
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          Python -m pip install --upgrade pip
+          Python3 -m pip install pytest==7.3.1
+
+      - name: Run Tests
+        run: |
+          pytest
